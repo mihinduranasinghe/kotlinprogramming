@@ -17,7 +17,7 @@ fun main(args: Array<String>):Unit{
         8,9->{
             //if x is 8 or 9 this part will be executed
         }
-        9..20->{
+        in 9..20->{
             //if x between 9 and 20
         }
         !in 20..30->{
