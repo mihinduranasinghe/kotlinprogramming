@@ -1,5 +1,7 @@
 package com.oopKotlin
+
 /*
+
 //INHERITANCE OOP
 // for reusability and method overriding
 //properties of a class in java PUBLIC, PRIVATE
@@ -12,20 +14,16 @@ package com.oopKotlin
 
 fun main(args:Array<String>):Unit{
     var dog = Dog()
-    dog.breed="Rottweiler"
-    dog.color="Black"
-    dog.bark()
     dog.eat()
+    println(dog.color)
+
 
     var cat =  Cat()
-    cat.color="white"
-    cat.age=3
-    cat.meow()
     cat.eat()
+    println(cat.color)
 
-    var animal = Animal()
-    animal.eat()
-    animal.color;
+
+
 
 
 
@@ -33,28 +31,43 @@ fun main(args:Array<String>):Unit{
 
 //public final class Animal{ //this is the default behavior in kotlin, so cannot inherit in default so make it as OPEN
 open class Animal{
-    var color:String=""
+    open var color:String="Default Red"//open it for method overrifding, otherwise it is PUBLIC/FINAL
 
-    fun eat(){
-        println("eat")
+    open fun eat(){//open it for method overrifding, otherwise it is PUBLIC/FINAL
+        println("Animal eating")
     }
+
 }
 
 class Dog:Animal(){
+   // class Dog:Animal(),TestInterface {
+
+    override var color:String="Black" //properti=y oerriding
 
     var breed:String=""
     fun bark() {
         println("Bark")
     }
+
+
+    override fun eat(){//method overriding
+        super.eat()
+        println("Dog is eating")
+    }
 }
 
 open class Cat:Animal(){
 
+    override var color:String="White"
     var age:Int=-1
     fun meow(){
         println("Meow")
     }
 
+    override fun eat(){
+        println("Cat is eating")
+    }
+
 }
 
-*/
+        */
