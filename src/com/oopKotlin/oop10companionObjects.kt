@@ -6,7 +6,7 @@ package com.oopKotlin
 
 fun main(args : Array<String>){
     //ar customersData = customersData()
-    customersData.count=5
+    myclass.count=5 //use classname. instead of obj name in previous
     var output= customersData.typeOfCustomers()
     println(output)
 
@@ -21,7 +21,10 @@ class myclass{
         fun typeOfCustomers(): String{//behave like static method
             return "Srilankan"
         }
-        override fun myMethod(str:String){//currently behving like static method
+
+        // @JvmStatic/ /to use this in a java file as static
+
+         fun myMethod(str:String){//currently behving like static method
             //super.myMethod(str)
             println("object customer data $str")
 
